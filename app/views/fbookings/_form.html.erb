@@ -1,0 +1,32 @@
+<%= form_with(model: fbooking) do |form| %>
+  <% if fbooking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fbooking.errors.count, "error") %> prohibited this fbooking from being saved:</h2>
+
+      <ul>
+        <% fbooking.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="actions">
+    <%= link_to 'Book_Ticket', form.submit ,class:'btn btn-primary' %>
+  </div>
+<% end %>

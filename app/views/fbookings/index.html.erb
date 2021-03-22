@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Flight_Bookings</h1>
+
+<table border="2px" class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fbookings.each do |fbooking| %>
+      <tr>
+        <td><%= fbooking.name %></td>
+        <td><%= fbooking.age %></td>
+        <td><%= fbooking.gender %></td>
+        <td><%= link_to 'Show', fbooking, class:'btn btn-primary' %>
+            <%= link_to 'Destroy', fbooking, class:'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Booking', new_fbooking_path, class:'btn btn-dark' %>

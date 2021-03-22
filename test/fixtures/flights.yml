@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  airline: MyString
+  origin_airport: MyString
+  destination_airport: MyString
+  departure: 2021-03-19 11:10:38
+  duration: MyString
+  price: 9.99
+  capacity: 1
+  available_seats: 1
+
+two:
+  airline: MyString
+  origin_airport: MyString
+  destination_airport: MyString
+  departure: 2021-03-19 11:10:38
+  duration: MyString
+  price: 9.99
+  capacity: 1
+  available_seats: 1

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Flights</h1>
+
+<table border="2px" class="table table-hover">
+  <thead>
+    <tr>
+      <th>Airline</th>
+      <th>Origin airport</th>
+      <th>Destination airport</th>
+      <th>Departure</th>
+      <th>Duration</th>
+      <th>Price</th>
+      <th>Capacity</th>
+      <th>Available seats</th>
+      <th>Action</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flights.each do |flight| %>
+      <tr>
+        <td><%= flight.airline %></td>
+        <td><%= flight.origin_airport %></td>
+        <td><%= flight.destination_airport %></td>
+        <td><%= flight.departure %></td>
+        <td><%= flight.duration %></td>
+        <td><%= flight.price %></td>
+        <td><%= flight.capacity %></td>
+        <td><%= flight.available_seats %></td>
+        <td><%= link_to 'Show', flight , class:'btn btn-primary' %>
+            <%= link_to 'Booking', fbookings_path(flight), class:'btn btn-danger',data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="flickr_pagination">
+<%= will_paginate @Flight %>
+<%= link_to 'New Flight', new_flight_path , class:'btn btn-success' %>

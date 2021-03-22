@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fbooking.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @fbooking.age %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @fbooking.gender %>
+</p>
+
+<%= link_to 'Edit', edit_fbooking_path(@fbooking), class:'btn btn-warning' %> |
+<%= link_to 'Back',  new_fbooking_path, class:'btn btn-success' %>
